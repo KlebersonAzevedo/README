@@ -1,0 +1,22 @@
+#Questão 7
+
+Para cada expressão, teremos que:
+
+p = mat + 1;
+
+Esta expressão é válida. Em C, o nome de um array pode ser interpretado como o endereço do seu primeiro elemento. Portanto, mat é equivalente a &mat[0]. 
+A expressão mat + 1 resulta no endereço do segundo elemento do array (lembrando que a indexação começa em 0), o qual é perfeitamente atribuível a um ponteiro para inteiro p. 
+A aritmética de ponteiros garante que mat + 1 aponte para o elemento imediatamente após mat[0], ou seja, mat[1].
+p = mat;
+
+Esta expressão também é válida e tem uma justificativa semelhante à anterior. Atribuir mat a p faz com que p aponte para o primeiro elemento do array mat,
+ou seja, p recebe o endereço de mat[0]. É uma maneira direta de inicializar um ponteiro para o início de um array.
+p = mat;
+
+Esta expressão é idêntica à anterior e, portanto, também válida pelas mesmas razões. p apontará para o primeiro elemento de mat.
+x = (*mat);
+
+Esta expressão é válida e resulta na atribuição do valor do primeiro elemento do array mat à variável x. O operador de dereferenciação * é utilizado aqui para acessar o valor
+apontado por mat, que, como já mencionado, é equivalente a &mat[0]. Portanto, (*mat) é igual a mat[0], e esse valor é atribuído a x.
+
+Logo, todas as expressões são válidas.
