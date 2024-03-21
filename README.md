@@ -1,0 +1,2 @@
+# README
+ lista de ponteiros
