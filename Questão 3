@@ -1,0 +1,12 @@
+Questão 3
+
+1. p = &i || Explicação ->  Atribui o endereço de i ao ponteiro p. Esta é uma operação comum e correta.
+2. *q = &j || Explicação -> Tenta atribuir o endereço de j (que é um int*) a *q, que é do tipo int. Há um erro de tipo aqui, pois *q espera um int, não um int*.
+3. p = &*&i || Explicação -> Embora pareça complexo, esta expressão é válida. &*&i basicamente se resolve para &i, o que é o endereço de i, adequado para ser atribuído ao ponteiro p.
+4. i = (*&)j || Explicação -> A sintaxe (*&) é inválida em C. O compilador não reconhecerá esta expressão.
+5. i = *&j || Explicação -> Esta expressão é válida e se resolve para i = j;. *&j efetivamente cancela o endereçamento e a dereferenciação, deixando apenas o valor de j.
+6. Semelhante à anterior, todas as operações de endereçamento e dereferenciação se cancelam mutuamente, resultando em uma atribuição simples do valor de j para i.
+7. q = *p || Explicação -> Aqui, tenta-se atribuir o valor apontado por p (que é um int) ao ponteiro q (que espera um int*). Há um erro de tipo, pois q espera um endereço (int*), não um valor inteiro.
+8. i = (*p)++ + *q || Explicação -> Esta expressão incrementa o valor apontado por p e depois soma ao valor apontado por q, atribuindo o resultado a i. A operação é legal, mas é importante notar que o valor apontado por p é alterado devido ao operador de incremento ++.
+
+Logo, as expressões invalidas são essas: (2,4 e 7) por conta do erro de sintaxe do codigo.
