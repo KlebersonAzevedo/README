@@ -1,0 +1,24 @@
+#Questão 6
+
+Para cada situação temos que:
+
+*(pulo + 2);
+
+Esta expressão efetivamente referência o valor do terceiro elemento do vetor. Em C, o nome do vetor é um ponteiro para o primeiro elemento do vetor. 
+Portanto, pulo + 2 aponta para o terceiro elemento do vetor (lembrando que a indexação em C começa do 0), 
+e o operador de dereferenciação * é usado para acessar o valor desse elemento.
+
+*(pulo + 4);
+
+Esta expressão referenciaria o valor do quinto elemento do vetor, não o terceiro, devido ao deslocamento de 4 posições a partir do início do vetor.
+
+pulo + 4;
+
+Esta expressão resulta em um ponteiro para o quinto elemento do vetor, não referenciando diretamente o valor de nenhum elemento, e certamente não o valor do terceiro elemento.
+
+pulo + 2;
+
+Similar à expressão anterior, esta resulta em um ponteiro para o terceiro elemento do vetor.
+Não dereferencia o valor do terceiro elemento diretamente, mas sim aponta para sua localização.
+
+Sendo assim, a expressão que corretamente referência o valor do terceiro elemento do vetor é *(pulo + 2);
