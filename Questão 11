@@ -2,16 +2,64 @@
 
 Resposta:
 
-aloha[2] = value; É válido, a posição 3 do vetor aloha recebe o valor da variável value.
+Se x for declarado como char:
+char: ocupa 1 byte
+x+1: 4093 (4092 + 1*1)
+x+2: 4094 (4092 + 2*1)
+x+3: 4095 (4092 + 3*1)aloha[2] = value; É válido, a posição 3 do vetor aloha recebe o valor da variável value.
 
-scanf("%f", &aloha); É válida, é gravado o valor do lido na primeira posição do vetor aloha, aloha[0].
+Se x for declarado como int:
+int: ocupa 2 bytes
+x+1: 4094 (4092 + 1*2)
+x+2: 4096 (4092 + 2*2)
+x+3: 4098 (4092 + 3*2)
 
-printf("%f", aloha); Comando válido, mas não exibirá o valor do vetor, para isso é preciso um laço e imprimir o vetor comutando seus índices.
+Se x for declarado como float:
+float: ocupa 4 bytes
+x+1: 4096 (4092 + 1*4)
+x+2: 4100 (4092 + 2*4)
+x+3: 4104 (4092 + 3*4)
 
-coisas[4][4] = aloha[3]; Comando válido, guardará o valor de aloha[3] na linha e coluna indicada em coisas
+Se x for declarado como double:
+double: ocupa 8 bytes
+x+1: 4100 (4092 + 1*8)
+x+2: 4108 (4092 + 2*8)
+x+3: 4116 (4092 + 3*8)
 
-coisas[5] = aloha; Inválido, um dos motivos é que é necessário indicar os índices de linha e de coluna
+Programa teste escolhido;
 
-pf = value; inválido, necessário indicar o endereço da variável, exemplo: pf = &value.
+#include <stdio.h>
 
-pf = aloha; válido, ponteiro apontará para o endereço de aloha.
+int main() {
+    char x_char[4];
+    int x_int[4];
+    float x_float[4];
+    double x_double[4];
+
+    printf("Char array addresses:\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%p\n", (void*)&x_char[i]);
+    }
+
+    printf("\nInt array addresses:\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%p\n", (void*)&x_int[i]);
+    }
+
+    printf("\nFloat array addresses:\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%p\n", (void*)&x_float[i]);
+    }
+
+    printf("\nDouble array addresses:\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%p\n", (void*)&x_double[i]);
+    }
+
+    return 0;
+}
+
+Esse programa irá imprimir os endereços de memória de cada elemento nos quatro vetores declarados.
+
+
+
