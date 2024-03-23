@@ -1,0 +1,7 @@
+# Questão 10
+
+Resposta:
+
+De acordo com o programa, ele irá modificar o valor 3 através de um ponteiro. Onde irá alocar primeiramento em um espaço de memoria, e após, fazer o ponteira somar com o valor.
+
+Desse modo, a saída será 4
